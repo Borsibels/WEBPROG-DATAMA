@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/261742be5d.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Pet Adopt Logo">
+            <h1>About Pet Adopt</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">OTHER TYPES OF PETS</a></li>
+                <li><a href="#">DOGS AND PUPPIES</a></li>
+                <li><a href="#">CATS AND KITTENS</a></li>
+                <li><a href="#" class="signup">SIGN UP</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="about-us">
+            <div class="content-wrapper fade-in">
+                <h2>Our Mission</h2>
+                <p>Many shelters deal with the dual problems of little money and low visibility in their areas as the number of animals in shelters keeps growing. The goal of this project is to develop an easy-to-use website that highlights nearby animal shelters, the creatures they have up for adoption, and the advantages of pet adoption. The website can help foster relationships between shelters and potential pet owners by offering a consolidated resource for pet adoption, which would ultimately boost adoption rates and enhance animal welfare.</p>
+            </div>
+        </section>
+
+        <section class="team">
+            <div class="content-wrapper fade-in">
+                <h2>Meet Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="antonio.jpg" alt="Antonio, Viancielle">
+                        <h3>Antonio, Viancielle</h3>
+                        <p>Role or Title</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="atienza.jpg" alt="Atienza, Maria Xandra Angelica M.">
+                        <h3>Atienza, Maria Xandra Angelica M.</h3>
+                        <p>Role or Title</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="cometa.jpg" alt="Cometa, Oliver King">
+                        <h3>Cometa, Oliver King</h3>
+                        <p>Role or Title</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="santos.jpg" alt="Santos, Gabriel">
+                        <h3>Santos, Gabriel</h3>
+                        <p>Role or Title</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="taupa.jpg" alt="Taupa, Mavrick DJ">
+                        <h3>Taupa, Mavrick DJ</h3>
+                        <p>Role or Title</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Pet Adopt. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
